@@ -5,11 +5,12 @@ package scenes;
 import com.haxepunk.Scene;
 import com.haxepunk.graphics.Image;
 import com.haxepunk.Entity;
+import entities.Block;
 
 class GameScene extends Scene {
 
 	// defining class members
-	private var block:Entity;
+	// private var block:Entity;
 
 	// constructor
 	public function new() {
@@ -19,13 +20,13 @@ class GameScene extends Scene {
 	// methods
 	public override function begin() {
 
-		block = addGraphic(new Image("graphics/block.png"));
+		add( new Block(30, 50));
+
+		
 	}
 
 	public override function update() {
-
-		block.moveBy(1, 2);
-
+		
 		super.update();
 	}
 
